@@ -44,12 +44,12 @@
 }
 
 .brand-text[b-jgoclqh6a1] {
-    font-family: cursive;
+    font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 2rem;
     font-weight: 700;
     white-space: nowrap;
     color: #000;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .topbar-nav[b-jgoclqh6a1] {
