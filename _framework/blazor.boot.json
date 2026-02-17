@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WarrantyPing",
   "resources": {
-    "hash": "sha256-YOFUqTM5t9XY5wuSBY3K4TkqugTGXWJPf425UxTG10A=",
+    "hash": "sha256-DDjV9mDE+8QAWKBsFR29NqhHwkGRtwAvEY070l8wkIg=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-4g0GzvOXSwZvTLca4PrWJkoeltz+V9IF/hEFDcnVros="
     },
@@ -54,7 +54,7 @@
     },
     "satelliteResources": {
       "de": {
-        "WarrantyPing.resources.wasm": "sha256-OMOsQFMNHQmx0u8XFpytvdKpfOdYedSMPzNYC42Fj4U="
+        "WarrantyPing.resources.wasm": "sha256-uKm3HH5NT399jK7jNncT2Oo3k20SVEuJ5joVfR1olWo="
       }
     }
   },
