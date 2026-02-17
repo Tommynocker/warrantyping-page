@@ -2,23 +2,30 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>WarrantyPing</title>
+    <title>Redirecting...</title>
     <script type="text/javascript">
         // Single Page Apps for GitHub Pages
         // MIT License
         // https://github.com/rafgraph/spa-github-pages
-        var pathSegmentsToKeep = 1;
         
+        // Debug Logging
+        console.log('404.html loaded');
+        console.log('Current URL:', window.location.href);
+        
+        var pathSegmentsToKeep = 1;
         var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        
+        var newLocation = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
             l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
             l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
             (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+            l.hash;
+            
+        console.log('Redirecting to:', newLocation);
+        l.replace(newLocation);
     </script>
 </head>
 <body>
+    <h3>Redirecting...</h3>
 </body>
 </html>
