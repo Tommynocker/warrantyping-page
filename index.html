@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,6 +10,21 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link href="WarrantyPing.styles.css" rel="stylesheet" />
+    
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script>
+        (function(l) {
+            if (l.search[1] === '/' ) {
+                var decoded = l.search.slice(1).split('&').map(function(s) { 
+                    return s.replace(/~and~/g, '&')
+                }).join('?');
+                window.history.replaceState(null, null,
+                    l.pathname.slice(0, -1) + decoded + l.hash
+                );
+            }
+        }(window.location))
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
 </head>
 
 <body>
@@ -26,24 +41,8 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script>
-        // Fehler-Logging für Debugging
-        window.addEventListener('error', (e) => {
-            console.error('Error:', e.message, e.filename, e.lineno);
-        });
-    </script>
-    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
-    <script>
-        Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-                console.log(`Loading: ${type}, ${name}, ${defaultUri}`);
-                return defaultUri;
-            }
-        }).catch(err => {
-            console.error('Blazor start error:', err);
-            document.getElementById('app').innerHTML = '<h3>Failed to load application. See console for details.</h3>';
-        });
-    </script>
+    
+    <script src="_framework/blazor.webassembly.js"></script>
 </body>
 
 </html>

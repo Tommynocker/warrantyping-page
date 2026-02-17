@@ -1,49 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WarrantyPing</title>
-    <base href="/warrantyping-page/" />
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="WarrantyPing.styles.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <script>var pathSegmentsToKeep = 1;
+        var l = window.location;
+        l.replace(
+            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash
+        );</script>
 </head>
-
 <body>
-    <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
-    </div>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script>
-        // Fehler-Logging für Debugging
-        window.addEventListener('error', (e) => {
-            console.error('Error:', e.message, e.filename, e.lineno);
-        });
-    </script>
-    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
-    <script>
-        Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-                console.log(`Loading: ${type}, ${name}, ${defaultUri}`);
-                return defaultUri;
-            }
-        }).catch(err => {
-            console.error('Blazor start error:', err);
-            document.getElementById('app').innerHTML = '<h3>Failed to load application. See console for details.</h3>';
-        });
-    </script>
 </body>
-
 </html>
