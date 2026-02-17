@@ -13,17 +13,17 @@
     
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
+        console.log('[GitHub Pages] Script loaded');
+        console.log('[GitHub Pages] Current location:', window.location.href);
+        
         (function(l) {
             if (l.search[1] === '/' ) {
                 var decoded = l.search.slice(1).split('&').map(function(s) { 
                     return s.replace(/~and~/g, '&')
                 }).join('?');
-                window.history.replaceState(null, null,
-                    l.pathname.slice(0, -1) + decoded + l.hash
-                );
+                var newPath = l.pathname.slice(0, -1) + decoded + l.hash;
+                console.log('[GitHub Pages] Redirecting from 404 to:', newPath);
+                window.history.replaceState(null, null, newPath);
             }
         }(window.location))
     </script>
@@ -45,7 +45,18 @@
         <a class="dismiss">🗙</a>
     </div>
     
+    <script>
+        console.log('[Blazor] Loading blazor.webassembly.js');
+    </script>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        console.log('[Blazor] Script tag loaded');
+        
+        // Überwache Navigation
+        window.addEventListener('popstate', function(e) {
+            console.log('[Navigation] popstate event:', window.location.href);
+        });
+    </script>
 </body>
 
 </html>
