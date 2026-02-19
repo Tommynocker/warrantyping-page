@@ -4,24 +4,19 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
-        // Single Page Apps for GitHub Pages
-        // MIT License
-        // https://github.com/rafgraph/spa-github-pages
-        
-        // Debug Logging
-        console.log('404.html loaded');
-        console.log('Current URL:', window.location.href);
-        
+        // SPA for GitHub Pages - https://github.com/rafgraph/spa-github-pages
         var pathSegmentsToKeep = 1;
         var l = window.location;
-        
+
+        // Pfad in sessionStorage speichern für index.html
+        sessionStorage.redirect = l.href;
+
         var newLocation = l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
             l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
             l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
             (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
             l.hash;
-            
-        console.log('Redirecting to:', newLocation);
+
         l.replace(newLocation);
     </script>
 </head>
